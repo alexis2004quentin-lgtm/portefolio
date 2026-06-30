@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veille technologique — Alexis Quentin</title>
+  <meta name="description" content="Veille technologique d'Alexis Quentin : cybersécurité, réseaux, cloud, IA et développement." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="bracket">&lt;</span>AQ<span class="bracket">/&gt;</span><span class="blink"></span></a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="entreprise.html">Entreprise</a></li>
+        <li><a href="e4.html">E4</a></li>
+        <li><a href="e5.html">E5</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">~/</a> / veille</div>
+      <h1>Veille <span class="hl">technologique</span></h1>
+      <p>Mes lectures et analyses sur la cybersécurité, les réseaux, le cloud et l'IA.</p>
+    </div>
+  </header>
+
+  <section class="section-pad">
+    <div class="container">
+      <!-- Terminal animé -->
+      <div class="terminal fade-in">
+        <div class="terminal-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="ttitle">aq@portfolio: ~/veille</span>
+        </div>
+        <div class="terminal-body" id="term" aria-label="Sortie terminal de veille"></div>
+      </div>
+
+      <!-- Articles -->
+      <div class="section-head fade-in">
+        <span class="section-kicker">Articles</span>
+        <h2 class="section-title">3 articles <span class="hl">sélectionnés</span></h2>
+        <p class="section-subtitle">Triés par date décroissante.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Article 1 — Cybersécurité / réseau -->
+        <article class="card article-card fade-in">
+          <div class="a-top">
+            <span class="cat c-red">🔴 Cybersécurité</span>
+            <span class="date">2026-05-18</span>
+          </div>
+          <h3>Zero Trust : repenser la sécurité des réseaux d'entreprise</h3>
+          <p>Le modèle « ne jamais faire confiance, toujours vérifier » s'impose dans les infrastructures. Segmentation, contrôle d'accès et authentification continue au cœur de la démarche SISR.</p>
+          <a class="source" href="https://www.cert.ssi.gouv.fr" target="_blank" rel="noopener">
+            ANSSI · CERT-FR <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Article 2 — Réseaux / infrastructure -->
+        <article class="card article-card fade-in-2">
+          <div class="a-top">
+            <span class="cat c-blue">🔵 Réseaux</span>
+            <span class="date">2026-04-22</span>
+          </div>
+          <h3>SD-WAN vs MPLS : quelle architecture pour les sites distants ?</h3>
+          <p>Comparatif technique et économique entre SD-WAN et liaisons MPLS, avec retours d'expérience sur les migrations multisites et la qualité de service.</p>
+          <a class="source" href="https://www.networkworld.com" target="_blank" rel="noopener">
+            NetworkWorld <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Article 3 — Intelligence Artificielle -->
+        <article class="card article-card fade-in-3">
+          <div class="a-top">
+            <span class="cat c-purple">🟣 Intelligence Artificielle</span>
+            <span class="date">2026-03-15</span>
+          </div>
+          <h3>IA générative dans les SI : souveraineté des données et cybersécurité</h3>
+          <p>Intégrer des assistants IA en entreprise sans compromettre la sécurité : conformité RGPD, localisation des données et nouveaux risques pour l'administration système.</p>
+          <a class="source" href="https://www.lemagit.fr" target="_blank" rel="noopener">
+            LeMagIT <span class="arrow">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="f-logo"><span class="bracket">&lt;</span>AQ<span class="bracket">/&gt;</span></div>
+      <div class="f-copy">© <span class="js-year">2026</span> Alexis Quentin — BTS SIO SISR</div>
+      <div class="f-links">
+        <a href="https://www.linkedin.com/in/alexis-quentin-567057338/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="documents/Alexis_CV.pdf" download>CV</a>
+        <a href="apropos.html">À propos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    /* Terminal typewriter (page veille) */
+    (function () {
+      const term = document.getElementById('term');
+      if (!term) return;
+
+      // Segments : { t: texte, c: classe optionnelle, nl: saut de ligne après }
+      const lines = [
+        [ {t:'aq@portfolio:~$ ', c:'usr'}, {t:'cat README.md', c:'cmd'} ],
+        [ {t:'# Veille Technologique — Alexis Quentin', c:'hl'} ],
+        [ {t:'Ce répertoire recense mes articles de veille technologique'} ],
+        [ {t:'sur la cybersécurité, les réseaux, le cloud et l\'IA.'} ],
+        [ {t:''} ],
+        [ {t:'aq@portfolio:~$ ', c:'usr'}, {t:'ls -la articles/', c:'cmd'} ],
+        [ {t:'✔ 3 articles trouvés', c:'ok'}, {t:' — triés par date (desc)'} ],
+        [ {t:'aq@portfolio:~$ ', c:'usr'}, {t:'', c:'cmd'} ]
+      ];
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let li = 0;
+
+      function makeCaret() {
+        const c = document.createElement('span');
+        c.className = 'term-caret';
+        return c;
+      }
+
+      function typeLine() {
+        if (li >= lines.length) {
+          term.appendChild(makeCaret());
+          return;
+        }
+        const segs = lines[li];
+        const lineEl = document.createElement('div');
+        term.appendChild(lineEl);
+        typeSegs(lineEl, segs, 0, function () {
+          li++;
+          setTimeout(typeLine, 180);
+        });
+      }
+
+      function typeSegs(lineEl, segs, si, done) {
+        if (si >= segs.length) return done();
+        const seg = segs[si];
+        const span = document.createElement('span');
+        if (seg.c) span.className = seg.c;
+        lineEl.appendChild(span);
+        let i = 0;
+        const txt = seg.t;
+        if (reduce || txt.length === 0) {
+          span.textContent = txt;
+          return typeSegs(lineEl, segs, si + 1, done);
+        }
+        (function typeChar() {
+          span.textContent = txt.slice(0, ++i);
+          if (i < txt.length) setTimeout(typeChar, 22);
+          else typeSegs(lineEl, segs, si + 1, done);
+        })();
+      }
+
+      // Démarre quand le terminal entre dans le viewport
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { typeLine(); obs.disconnect(); }
+          });
+        }, { threshold: 0.3 });
+        io.observe(term);
+      } else {
+        typeLine();
+      }
+    })();
+  </script>
+</body>
+</html>

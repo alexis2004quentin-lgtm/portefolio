@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de synthèse E4 — Quentin Alexis</title>
+  <meta name="description" content="Tableau de synthèse des réalisations professionnelles — épreuve E4 — Quentin Alexis, BTS SIO SISR." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>" />
+  <style>
+    /* Styles spécifiques au tableau de synthèse */
+    .synth-head {
+      display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between;
+      align-items: flex-end; margin-bottom: 30px;
+    }
+    .synth-id-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px; margin-bottom: 40px;
+    }
+    .opt-pills { display: flex; gap: 10px; margin-top: 10px; }
+    .opt-pill {
+      font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 1px;
+      padding: 5px 14px; border-radius: 8px; border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+    .opt-pill.on {
+      color: var(--accent-green); border-color: rgba(0,255,136,0.35);
+      background: rgba(0,255,136,0.07); box-shadow: 0 0 14px rgba(0,255,136,0.15);
+    }
+    .comp-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .comp-block { padding: 22px; }
+    .comp-block h3 {
+      font-size: 1.02rem; font-weight: 700; margin-bottom: 14px;
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .comp-block h3 .n {
+      font-family: var(--font-mono); color: var(--accent-cyan); font-size: 0.85rem;
+      border: 1px solid var(--border-hover); border-radius: 7px;
+      padding: 2px 8px; flex-shrink: 0;
+    }
+    .comp-block ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .comp-block ul li {
+      font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;
+      padding-left: 16px; position: relative;
+    }
+    .comp-block ul li::before {
+      content: '▸'; position: absolute; left: 0; color: var(--accent-cyan);
+    }
+    .real-group { margin-bottom: 30px; }
+    .real-group > .rg-title {
+      font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .real-group > .rg-title::before {
+      content: ''; width: 20px; height: 1px; background: var(--accent-cyan);
+      box-shadow: var(--glow-cyan);
+    }
+    .real-table { display: flex; flex-direction: column; gap: 8px; }
+    .real-row {
+      display: flex; justify-content: space-between; gap: 16px; align-items: center;
+      background: rgba(6,15,30,0.55); border: 1px solid var(--border);
+      border-radius: 10px; padding: 13px 18px; transition: border-color .25s, background .25s;
+    }
+    .real-row:hover { border-color: var(--border-hover); background: var(--bg-tertiary); }
+    .real-row .rr-label { font-size: 0.92rem; color: var(--text-primary); }
+    .real-row .rr-label .tags { display:block; font-family: var(--font-mono); font-size:0.72rem; color: var(--text-muted); margin-top:3px; }
+    .real-row .rr-date {
+      font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-cyan);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .empty-note {
+      font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted);
+      padding: 14px 18px; border: 1px dashed var(--border); border-radius: 10px;
+    }
+    @media (max-width: 768px) { .comp-grid { grid-template-columns: 1fr; } }
+    @media print {
+      .navbar, .footer, .scanlines, .scan-beam, .back-bar { display: none !important; }
+      body { background: #fff; color: #000; }
+      .card, .real-row { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="bracket">&lt;</span>AQ<span class="bracket">/&gt;</span><span class="blink"></span></a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="entreprise.html">Entreprise</a></li>
+        <li><a href="e4.html">E4</a></li>
+        <li><a href="e5.html">E5</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="breadcrumb back-bar"><a href="e4.html">~/e4</a> / tableau-de-synthèse</div>
+      <h1>Tableau de <span class="hl">synthèse</span></h1>
+      <p>BTS Services Informatiques aux Organisations — Réalisations professionnelles · Épreuve E4.</p>
+    </div>
+  </header>
+
+  <section class="section-pad">
+    <div class="container">
+
+      <!-- Option -->
+      <div class="info-block fade-in" style="margin-bottom:30px">
+        <p style="margin-bottom:8px"><strong>Option choisie</strong></p>
+        <div class="opt-pills">
+          <span class="opt-pill on">☑ SISR</span>
+          <span class="opt-pill">☐ SLAM</span>
+        </div>
+      </div>
+
+      <!-- Identité -->
+      <div class="synth-id-grid fade-in">
+        <div class="meta-card"><div class="k">Nom et prénom</div><div class="v">QUENTIN Alexis</div></div>
+        <div class="meta-card"><div class="k">Centre de formation</div><div class="v">École IRIS — Paris</div></div>
+        <div class="meta-card"><div class="k">Session</div><div class="v">2027</div></div>
+        <div class="meta-card"><div class="k">Période</div><div class="v">du 01/09/2025 au 30/06/2027</div></div>
+      </div>
+
+      <!-- Compétences -->
+      <div class="section-head fade-in">
+        <span class="section-kicker">Référentiel</span>
+        <h2 class="section-title">Compétences <span class="hl">mises en œuvre</span></h2>
+      </div>
+
+      <div class="comp-grid">
+        <article class="card comp-block fade-in">
+          <h3><span class="n">01</span> Gérer le patrimoine informatique</h3>
+          <ul>
+            <li>Recenser et identifier les ressources numériques</li>
+            <li>Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+            <li>Mettre en place et vérifier les niveaux d'habilitation associés à un service</li>
+            <li>Vérifier les conditions de la continuité d'un service informatique</li>
+            <li>Gérer des sauvegardes</li>
+            <li>Vérifier le respect des règles d'utilisation des ressources numériques</li>
+          </ul>
+        </article>
+
+        <article class="card comp-block fade-in-2">
+          <h3><span class="n">02</span> Répondre aux incidents et aux demandes d'assistance et d'évolution</h3>
+          <ul>
+            <li>Collecter, suivre et orienter des demandes</li>
+            <li>Traiter des demandes concernant les services réseau et système, applicatifs</li>
+            <li>Traiter des demandes concernant les applications</li>
+          </ul>
+        </article>
+
+        <article class="card comp-block fade-in-3">
+          <h3><span class="n">03</span> Développer la présence en ligne de l'organisation</h3>
+          <ul>
+            <li>Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</li>
+            <li>Référencer les services en ligne de l'organisation et mesurer leur visibilité</li>
+            <li>Participer à l'évolution d'un site Web exploitant les données de l'organisation</li>
+          </ul>
+        </article>
+
+        <article class="card comp-block fade-in">
+          <h3><span class="n">04</span> Travailler en mode projet</h3>
+          <ul>
+            <li>Analyser les objectifs et les modalités d'organisation d'un projet</li>
+            <li>Planifier les activités</li>
+            <li>Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
+          </ul>
+        </article>
+
+        <article class="card comp-block fade-in-2">
+          <h3><span class="n">05</span> Mettre à disposition des utilisateurs un service informatique</h3>
+          <ul>
+            <li>Réaliser les tests d'intégration et d'acceptation d'un service</li>
+            <li>Déployer un service</li>
+            <li>Accompagner les utilisateurs dans la mise en place d'un service</li>
+          </ul>
+        </article>
+
+        <article class="card comp-block fade-in-3">
+          <h3><span class="n">06</span> Organiser son développement professionnel</h3>
+          <ul>
+            <li>Mettre en place son environnement d'apprentissage personnel</li>
+            <li>Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+            <li>Gérer son identité professionnelle</li>
+            <li>Développer son projet professionnel</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Réalisations -->
+      <div class="section-head fade-in" style="margin-top:60px">
+        <span class="section-kicker">Synthèse</span>
+        <h2 class="section-title">Réalisations <span class="hl">professionnelles</span></h2>
+        <p class="section-subtitle">Intitulé et documents associés, classés par contexte.</p>
+      </div>
+
+      <!-- En formation -->
+      <div class="real-group fade-in">
+        <div class="rg-title">Réalisations en cours de formation</div>
+        <div class="real-table">
+          <div class="real-row">
+            <div class="rr-label">Restructuration de l'infrastructure Stadiumcompany
+              <span class="tags">VLAN · VTP · routage inter-VLAN · routage statique</span></div>
+            <div class="rr-date">oct-25</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Mise en œuvre DHCP, routage et translation d'adresses
+              <span class="tags">DHCP · NAT/PAT · routage</span></div>
+            <div class="rr-date">déc-25</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Cluster web en haute disponibilité
+              <span class="tags">HAProxy · Heartbeat · failover</span></div>
+            <div class="rr-date">janv-26</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Mise en place d'une solution de gestion de parc informatique
+              <span class="tags">OCS Inventory · GLPI</span></div>
+            <div class="rr-date">févr-26</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Gestion des utilisateurs dans l'Active Directory
+              <span class="tags">Windows Server · Active Directory</span></div>
+            <div class="rr-date">mars-26</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Milieu pro 1ère année -->
+      <div class="real-group fade-in">
+        <div class="rg-title">Réalisations en milieu professionnel — 1ʳᵉ année (Asfalia)</div>
+        <div class="real-table">
+          <div class="real-row">
+            <div class="rr-label">Configuration et administration de serveurs NAS Synology
+              <span class="tags">Synology DSM · SMB/CIFS · RAID · sauvegarde</span></div>
+            <div class="rr-date">sept-25</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Maintenance du réseau local de l'entreprise
+              <span class="tags">LAN · Wi-Fi · câblage</span></div>
+            <div class="rr-date">oct-25</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Surveillance de la connectivité et de la sécurité réseau
+              <span class="tags">DHCP · DNS · VPN · pare-feu</span></div>
+            <div class="rr-date">nov-25</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Support technique et accompagnement des utilisateurs
+              <span class="tags">Windows · MacOS · ticketing</span></div>
+            <div class="rr-date">déc-25</div>
+          </div>
+          <div class="real-row">
+            <div class="rr-label">Déploiement et segmentation réseau par VLAN
+              <span class="tags">VLAN · switches managés · 802.1Q</span></div>
+            <div class="rr-date">janv-26</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Milieu pro 2e année -->
+      <div class="real-group fade-in">
+        <div class="rg-title">Réalisations en milieu professionnel — 2ᵉ année</div>
+        <div class="empty-note">// En cours — réalisations à compléter durant la seconde année d'alternance.</div>
+      </div>
+
+      <div class="hero-btns fade-in" style="margin-top:20px">
+        <a href="e4.html" class="btn btn-outline">← Retour à l'épreuve E4</a>
+        <a href="javascript:window.print()" class="btn btn-primary">Imprimer / Exporter PDF</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="f-logo"><span class="bracket">&lt;</span>AQ<span class="bracket">/&gt;</span></div>
+      <div class="f-copy">© <span class="js-year">2026</span> Alexis Quentin — BTS SIO SISR</div>
+      <div class="f-links">
+        <a href="https://www.linkedin.com/in/alexis-quentin-567057338/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="documents/Alexis_CV.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="apropos.html">À propos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

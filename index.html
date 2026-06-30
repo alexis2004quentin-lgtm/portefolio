@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexis Quentin — BTS SIO SISR · Portfolio</title>
+  <meta name="description" content="Portfolio d'Alexis Quentin, étudiant BTS SIO option SISR à l'IRIS Paris, alternant technicien informatique chez Asfalia." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="bracket">&lt;</span>AQ<span class="bracket">/&gt;</span><span class="blink"></span>
+      </a>
+      <button class="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="entreprise.html">Entreprise</a></li>
+        <li><a href="e4.html">E4</a></li>
+        <li><a href="e5.html">E5</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="scan-beam" aria-hidden="true"></div>
+    <div class="container">
+      <span class="pre-title fade-in">[ Étudiant BTS SIO — Option SISR ]</span>
+      <h1 class="fade-in-2">Alexis Quentin.</h1>
+      <div class="typewriter-line fade-in-2">
+        <span class="prompt">&gt;</span><span class="tw-text" id="typewriter"></span><span class="tw-caret"></span>
+      </div>
+      <p class="lead fade-in-3">
+        Passionné par les <strong>réseaux, l'infrastructure</strong> et le
+        <strong>développement</strong>, je construis des solutions robustes.
+        En alternance chez <strong>Asfalia</strong> pour le groupe Loiselet &amp; Daigremont.
+      </p>
+      <div class="hero-btns fade-in-4">
+        <a href="documents/Alexis_CV.pdf" class="btn btn-primary" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Voir mon CV
+        </a>
+        <a href="apropos.html" class="btn btn-outline">
+          En savoir plus
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid fade-in-4">
+        <div class="stat"><div class="num">2</div><div class="label">Ans de formation</div></div>
+        <div class="stat"><div class="num">4+</div><div class="label">Projets techniques</div></div>
+        <div class="stat"><div class="num">SISR</div><div class="label">Spécialité</div></div>
+        <div class="stat"><div class="num">IDF</div><div class="label">Île-de-France</div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== COMPÉTENCES ===== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-kicker">Compétences</span>
+        <h2 class="section-title">Domaines de <span class="hl">maîtrise</span></h2>
+        <p class="section-subtitle">
+          Un profil orienté infrastructure réseau, complété par une solide base en développement.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="card skill-card fade-in">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h3>Réseaux &amp; Infrastructure</h3>
+          <p>Conception et administration d'architectures réseau segmentées, haute disponibilité et sécurisation des flux.</p>
+          <ul>
+            <li>VLAN &amp; routage inter-VLAN</li>
+            <li>Cisco IOS / Packet Tracer</li>
+            <li>DHCP, NAT/PAT, HAProxy</li>
+            <li>NAS Synology &amp; sauvegarde</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card fade-in-2">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Développement</h3>
+          <p>Création d'applications web et logicielles, du front-end vanilla aux plateformes SaaS et plugins audio natifs.</p>
+          <ul>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Node.js &amp; SQL</li>
+            <li>C++ / JUCE (VST)</li>
+            <li>Git &amp; déploiement</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card fade-in-3">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Support &amp; Administration</h3>
+          <p>Support utilisateur N1/N2, déploiement de postes, gestion de parc et administration d'annuaires.</p>
+          <ul>
+            <li>Windows 10/11 &amp; Server</li>
+            <li>Active Directory</li>
+            <li>OCS Inventory &amp; GLPI</li>
+            <li>Messagerie IMAP/POP3</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section-pad" style="padding-top:0">
+    <div class="container">
+      <div class="card fade-in" style="text-align:center; padding:50px 28px;">
+        <span class="section-kicker" style="justify-content:center">Navigation</span>
+        <h2 class="section-title" style="margin-bottom:14px">Explorer le <span class="hl">portfolio</span></h2>
+        <p class="section-subtitle" style="max-width:620px; margin:0 auto 28px">
+          Découvrez mon alternance, mes épreuves E4 &amp; E5, ma veille technologique et mon profil détaillé.
+        </p>
+        <div class="hero-btns" style="justify-content:center">
+          <a href="e5.html" class="btn btn-primary">Voir les projets E5</a>
+          <a href="entreprise.html" class="btn btn-outline">Mon alternance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="f-logo"><span class="bracket">&lt;</span>AQ<span class="bracket">/&gt;</span></div>
+      <div class="f-copy">© <span class="js-year">2026</span> Alexis Quentin — BTS SIO SISR</div>
+      <div class="f-links">
+        <a href="https://www.linkedin.com/in/alexis-quentin-567057338/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="documents/Alexis_CV.pdf" download>CV</a>
+        <a href="apropos.html">À propos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="particles.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    /* Typewriter du hero */
+    (function () {
+      const el = document.getElementById('typewriter');
+      if (!el) return;
+      const words = [
+        'Technicien réseau & système',
+        'Développeur passionné',
+        'Alternant chez Asfalia',
+        'Étudiant BTS SIO — SISR'
+      ];
+      let wi = 0, ci = 0, deleting = false;
+      function tick() {
+        const word = words[wi];
+        if (!deleting) {
+          el.textContent = word.slice(0, ++ci);
+          if (ci === word.length) { deleting = true; return setTimeout(tick, 1700); }
+        } else {
+          el.textContent = word.slice(0, --ci);
+          if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+        }
+        setTimeout(tick, deleting ? 45 : 85);
+      }
+      tick();
+    })();
+  </script>
+</body>
+</html>
